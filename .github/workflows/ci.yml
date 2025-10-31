@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   scan_ruby:
@@ -88,3 +88,49 @@ jobs:
           name: screenshots
           path: ${{ github.workspace }}/tmp/screenshots
           if-no-files-found: ignore
+
+  require_changeset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ensure main branch is up-to-date
+        run: git fetch origin main:main
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 23.x
+          cache: "pnpm"
+
+      - name: Install Changesets CLI
+        run: pnpm add @changesets/cli
+
+      - name: Check for Changeset
+        id: changeset_check
+        run: |
+          echo "Starting changeset check..."
+          pnpm changeset status --output changeset.json
+
+          CHANGESETS_LENGTH=$(jq '.changesets | length' changeset.json)
+          IS_EMPTY=$(jq '.changesets | length == 0' changeset.json)
+
+          if [ "$IS_EMPTY" = "true" ]; then
+            echo "no_changeset=true" >> $GITHUB_OUTPUT
+          else
+            echo "no_changeset=false" >> $GITHUB_OUTPUT
+          fi
+
+          echo "=== final output value ==="
+          echo "no_changeset value set to: $(cat $GITHUB_OUTPUT | grep no_changeset)"
+
+      - name: Fail if no Changeset found
+        if: ${{ steps.changeset_check.outputs.no_changeset == 'true' && github.event_name == 'pull_request' }}
+        run: |
+          echo "A Changeset is required for this PR. Please create one using 'pnpx changeset'."
+          exit 1

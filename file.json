@@ -1,0 +1,25 @@
+{
+  "changesets": [
+    {
+      "releases": [
+        {
+          "name": "ruby-changeset",
+          "type": "patch"
+        }
+      ],
+      "summary": "CI added to ensure a changeset exists",
+      "id": "thirty-coats-camp"
+    }
+  ],
+  "releases": [
+    {
+      "name": "ruby-changeset",
+      "type": "patch",
+      "oldVersion": "2.0.0",
+      "changesets": [
+        "thirty-coats-camp"
+      ],
+      "newVersion": "2.0.1"
+    }
+  ]
+}
