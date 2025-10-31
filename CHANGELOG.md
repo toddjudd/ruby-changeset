@@ -1,5 +1,11 @@
 # ruby-changeset
 
+## 2.0.2
+
+### Patch Changes
+
+- 7a72d06: solve world hungar
+
 ## 2.0.1
 
 ### Patch Changes
