@@ -92,7 +92,7 @@ jobs:
   require_changeset:
     runs-on: ubuntu-latest
     # don't run tests for changeset release PRs
-    if: (!startsWith(github.head_ref, 'changeset-release/') && !startsWith(github.ref, 'refs/heads/changeset-release/'))
+    if: (!startsWith(github.head_ref, 'changeset-release/') && !startsWith(github.ref, 'refs/heads/changeset-release/') && github.ref != 'refs/heads/main')
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
