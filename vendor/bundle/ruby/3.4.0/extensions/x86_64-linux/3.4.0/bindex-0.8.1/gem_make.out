@@ -1,0 +1,18 @@
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+/opt/hostedtoolcache/Ruby/3.4.1/x64/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20251031-2167-9ke68t sitelibdir\=./.gem.20251031-2167-9ke68t clean
+
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20251031-2167-9ke68t sitelibdir\=./.gem.20251031-2167-9ke68t
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20251031-2167-9ke68t sitelibdir\=./.gem.20251031-2167-9ke68t install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20251031-2167-9ke68t/skiptrace/internal
+
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20251031-2167-9ke68t sitelibdir\=./.gem.20251031-2167-9ke68t clean

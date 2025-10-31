@@ -1,0 +1,19 @@
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.7/ext/stringio
+/opt/hostedtoolcache/Ruby/3.4.1/x64/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20251031-2167-j67rxp sitelibdir\=./.gem.20251031-2167-j67rxp clean
+
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20251031-2167-j67rxp sitelibdir\=./.gem.20251031-2167-j67rxp
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20251031-2167-j67rxp sitelibdir\=./.gem.20251031-2167-j67rxp install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20251031-2167-j67rxp
+
+current directory: /home/runner/work/ruby-changeset/ruby-changeset/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.7/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20251031-2167-j67rxp sitelibdir\=./.gem.20251031-2167-j67rxp clean
