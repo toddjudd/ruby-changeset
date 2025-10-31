@@ -1,5 +1,11 @@
 # ruby-changeset
 
+## 2.0.1
+
+### Patch Changes
+
+- c3c505f: CI added to ensure a changeset exists
+
 ## 2.0.0
 
 ### Major Changes
