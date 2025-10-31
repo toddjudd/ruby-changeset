@@ -40,7 +40,7 @@ jobs:
           publish: bundle exec rake release:publish
           version: bundle exec rake release:version
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
 
       - name: Read Output of Changesets Action
         run: |
