@@ -7,13 +7,14 @@ Rails.application.load_tasks
 
 namespace :release do
   desc "Set version number (format: x.y.z)"
-  task :version, [ :semver ] do |_t, args|
-    unless args[:semver] =~ /^\d+\.\d+\.\d+$/
-      abort "Invalid version format. Please use semantic versioning (x.y.z)"
-    end
+  task :version do
+    # run changeset to bump version in package.json and create changelog
+    sh "pnpm changeset version"
+    # read the new version from package.json
+    version = JSON.parse(File.read('package.json'))['version']
 
-    File.write('.version', args[:semver])
-    puts "Version set to #{args[:semver]}"
+    File.write('.version', version)
+    puts "Version set to #{version}"
   end
 
   task :publish do
