@@ -91,6 +91,8 @@ jobs:
 
   require_changeset:
     runs-on: ubuntu-latest
+    # don't run tests for changeset release PRs
+    if: github.ref != 'refs/heads/changeset-release'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
