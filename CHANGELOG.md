@@ -1,5 +1,12 @@
 # ruby-changeset
 
+## 2.0.3
+
+### Patch Changes
+
+- 7d7a1f7: Add Changeset Automation
+- 43db5d4: cleaned up readme
+
 ## 2.0.2
 
 ### Patch Changes
