@@ -6,6 +6,7 @@ tasks to manage versioning and changesets.
 # Features
 
 - Does Cool Stuff
+- Does Really Cool Stuff
 
 ## Rake Tasks
 
