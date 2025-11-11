@@ -18,10 +18,13 @@ namespace :release do
   end
 
   task :publish do
+    # tag the current commit with the version number from .version
     sh "git checkout main"
     sh "git pull"
     sh "git tag v#{File.read('.version').strip}"
     sh "git push --tags"
+    # publish a release to github
+    sh "gh release create v#{File.read('.version').strip} --generate-notes"
   end
 
   task :changeset do
