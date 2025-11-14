@@ -1,5 +1,12 @@
 # ruby-changeset
 
+## 2.0.4
+
+### Patch Changes
+
+- fcd8ab2: Feature add - does really cool stuff
+- 3649e1a: add feature - does cool stuff
+
 ## 2.0.3
 
 ### Patch Changes
